@@ -11,7 +11,7 @@ namespace AdventOfCode2022
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(Import.ImportString());
+            Day01.Day_01_Part01();
             Console.ReadLine();
         }
     }
