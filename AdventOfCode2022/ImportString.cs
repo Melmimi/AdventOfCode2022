@@ -11,7 +11,7 @@ namespace AdventOfCode2022
         public static string ImportString()
         {
 
-           string importString = System.IO.File.ReadAllText(@"C:\Users\miche\source\repos\AdventOfCode2022\InputFiles\Day_01.txt");
+           string importString = System.IO.File.ReadAllText(@"C:\Users\miche\source\repos\AdventOfCode2022\InputFiles\Day_03.txt");
             return importString;
         }
 
