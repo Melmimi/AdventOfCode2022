@@ -61,6 +61,8 @@
     <Compile Include="Day_01.cs" />
     <Compile Include="Day_02.cs" />
     <Compile Include="Day_03.cs" />
+    <Compile Include="Day_04.cs" />
+    <Compile Include="Day_05.cs" />
     <Compile Include="ImportString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
