@@ -63,9 +63,13 @@
     <Compile Include="Day_03.cs" />
     <Compile Include="Day_04.cs" />
     <Compile Include="Day_05.cs" />
+    <Compile Include="Day_06.cs" />
+    <Compile Include="Day_07.cs" />
     <Compile Include="ImportString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tree.cs" />
+    <Compile Include="TreeNode.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
