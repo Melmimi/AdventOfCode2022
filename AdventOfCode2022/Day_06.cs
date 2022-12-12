@@ -47,7 +47,7 @@ namespace AdventOfCode2022
             string importString = Import.ImportString();
 
             char[] input = importString.ToCharArray();
-            int counter = 0;
+            //int counter = 0;
 
 
 

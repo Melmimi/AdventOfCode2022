@@ -11,7 +11,7 @@ namespace AdventOfCode2022
     {
         static void Main(string[] args)
         {
-            Day_09.Day_09_Part02();
+            Day_11.Day_11_Part01();
             Console.ReadLine();
 
 
