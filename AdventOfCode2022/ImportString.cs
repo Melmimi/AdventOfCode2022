@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,11 +9,11 @@ namespace AdventOfCode2022
 {
     class Import
     {
-        public static string ImportString()
+        public static string ImportString(string fileName)
         {
 
-           string importString = System.IO.File.ReadAllText(@"C:\Users\miche\source\repos\AdventOfCode2022\InputFiles\Day_11.txt");
-            return importString;
+           string importString = System.IO.File.ReadAllText( @"..\..\InputFiles\"+fileName);
+           return importString;
         }
 
     }

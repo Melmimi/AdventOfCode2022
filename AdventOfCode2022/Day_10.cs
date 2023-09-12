@@ -11,7 +11,7 @@ namespace AdventOfCode2022
         public static void Day_10_Part01()
         {
 
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_10.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             int currentLine=0;
 
@@ -80,7 +80,7 @@ namespace AdventOfCode2022
         public static void Day_10_Part02()
         {
 
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_10.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             int currentLine = 0;
 

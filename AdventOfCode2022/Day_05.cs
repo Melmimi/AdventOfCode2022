@@ -10,7 +10,7 @@ namespace AdventOfCode2022
     {
         public static void Day_05_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_05.txt");
             string[] inputs = importString.Split('-');
 
             string[] startingStackLines = inputs[0].Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
@@ -50,7 +50,7 @@ namespace AdventOfCode2022
                 }
 
             }
-
+            /*
             foreach (List<char> row in stacksLists)
             {
                 foreach (char c in row)
@@ -58,19 +58,19 @@ namespace AdventOfCode2022
                     Console.Write(c.ToString());
                 }
                 Console.WriteLine();
-            }
+            }*/
 
             foreach (string line in instructionsLines)
             {
                 if (line != "") { 
-                    Console.WriteLine(line);
+                    //Console.WriteLine(line);
                     int[] instructions = Array.ConvertAll(line.Split(new string[] { "move ", " from ", " to " }, StringSplitOptions.RemoveEmptyEntries), s => int.Parse(s));
 
                     int amount = instructions[0];
                     int origin = instructions[1]-1;
                     int goal = instructions[2]-1;
 
-                    Console.WriteLine("amount: " + amount + ", origin: " + origin + ", goal: " + goal);
+                    //Console.WriteLine("amount: " + amount + ", origin: " + origin + ", goal: " + goal);
                         
                     for (int i = amount; i > 0; i--)
                     {
@@ -78,10 +78,8 @@ namespace AdventOfCode2022
                         stacksLists[goal].Add(stacksLists[origin][stacksLists[origin].Count-1]);
                         stacksLists[origin].RemoveAt(stacksLists[origin].Count - 1);
 
-                        
-
                     }
-
+                    /*
                     foreach (List<char> row in stacksLists)
                     {
                         foreach (char c in row)
@@ -89,21 +87,16 @@ namespace AdventOfCode2022
                             Console.Write(c.ToString());
                         }
                         Console.WriteLine();
-                    }
+                    }*/
                 }
                 
             }
 
+            Console.WriteLine("Part 01:");
             for (int i=0; i<9; i++)
             {
                 Console.WriteLine("Last box in " + i + " is " + stacksLists[i][stacksLists[i].Count - 1]);
             }
-            /*
-            Console.WriteLine("Last box in 1 is:" + stacksLists[0][stacksLists[0].Count - 1]);
-            Console.WriteLine("Last box in 2 is:" + stacksLists[1][stacksLists[1].Count - 1]);
-            Console.WriteLine("Last box in 3 is:" + stacksLists[2][stacksLists[2].Count - 1]);
-            */
-
 
             //Console.WriteLine("Ausgangssituation: " + inputs[0]);
             //Console.WriteLine("crane instructions: " + inputs[1]);
@@ -111,7 +104,7 @@ namespace AdventOfCode2022
         }
         public static void Day_05_Part02()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_05.txt");
             string[] inputs = importString.Split('-');
 
             string[] startingStackLines = inputs[0].Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
@@ -151,7 +144,7 @@ namespace AdventOfCode2022
                 }
 
             }
-
+            /*
             foreach (List<char> row in stacksLists)
             {
                 foreach (char c in row)
@@ -160,23 +153,23 @@ namespace AdventOfCode2022
                 }
                 Console.WriteLine();
             }
-
+            */
             foreach (string line in instructionsLines)
             {
                 if (line != "")
                 {
-                    Console.WriteLine(line);
+                    //Console.WriteLine(line);
                     int[] instructions = Array.ConvertAll(line.Split(new string[] { "move ", " from ", " to " }, StringSplitOptions.RemoveEmptyEntries), s => int.Parse(s));
 
                     int amount = instructions[0];
                     int origin = instructions[1] - 1;
                     int goal = instructions[2] - 1;
 
-                    Console.WriteLine("amount: " + amount + ", origin: " + origin + ", goal: " + goal);
+                    //Console.WriteLine("amount: " + amount + ", origin: " + origin + ", goal: " + goal);
                     
                     
 
-                    //This part needs to change
+
                     for (int i = amount; i > 0; i--)
                     {
                         stacksLists[goal].Add(stacksLists[origin][stacksLists[origin].Count - i]);
@@ -187,9 +180,7 @@ namespace AdventOfCode2022
 
                     }
 
-
-
-                    // until here
+                    /*
                     foreach (List<char> row in stacksLists)
                     {
                         foreach (char c in row)
@@ -197,13 +188,14 @@ namespace AdventOfCode2022
                             Console.Write(c.ToString());
                         }
                         Console.WriteLine();
-                    }
+                    }*/
                 }
 
             }
-
+            Console.WriteLine("Part 02:");
             for (int i = 0; i < 9; i++)
             {
+                
                 Console.WriteLine("Last box in " + i + " is " + stacksLists[i][stacksLists[i].Count - 1]);
             }
 

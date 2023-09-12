@@ -10,7 +10,7 @@ namespace AdventOfCode2022
     {
         public static void Day_03_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_03.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             int totalPriorities = 0;
 
@@ -21,8 +21,6 @@ namespace AdventOfCode2022
                 char[] charArray2 = line.Substring(line.Length / 2).ToCharArray();
 
                 IEnumerable<char> both = charArray1.Intersect(charArray2);
-
-
 
                 foreach(char character in both)
                 {
@@ -45,7 +43,7 @@ namespace AdventOfCode2022
         public static void Day_03_Part02()
         {
 
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_03.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             int totalPriorities = 0;
 

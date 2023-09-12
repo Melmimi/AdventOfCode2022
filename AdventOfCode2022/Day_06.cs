@@ -10,12 +10,12 @@ namespace AdventOfCode2022
     {
         public static void Day_06_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_06.txt");
 
             char[] input = importString.ToCharArray();
             int counter = 0;
             List<char> lastFour = new List<char>();
-
+            bool answerFound = false;
 
 
             foreach (char c in input)
@@ -32,10 +32,10 @@ namespace AdventOfCode2022
 
                     }
 
-
-                    if (lastFour[0] != lastFour[1] && lastFour[0] != lastFour[2] && lastFour[0] != lastFour[3] && lastFour[1] != lastFour[2] && lastFour[1] != lastFour[3] && lastFour[2] != lastFour[3])
+                    if (lastFour[0] != lastFour[1] && lastFour[0] != lastFour[2] && lastFour[0] != lastFour[3] && lastFour[1] != lastFour[2] && lastFour[1] != lastFour[3] && lastFour[2] != lastFour[3] && !answerFound)
                     {
                         Console.WriteLine("the first start of packet marker ends at position: " + counter);
+                        answerFound = true;
                     }
                 }
 
@@ -44,13 +44,9 @@ namespace AdventOfCode2022
 
         public static void Day_06_Part02()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_06.txt");
 
             char[] input = importString.ToCharArray();
-            //int counter = 0;
-
-
-
 
             for (int i = 0; i < input.Length - 15; i++)
             {

@@ -10,7 +10,7 @@ namespace AdventOfCode2022
     {
         public static void Day_11_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_11.txt");
             string[] monkeys = importString.Split(new string[] { Environment.NewLine + Environment.NewLine }, StringSplitOptions.None);
             List<Monkey> monkeyList = new List<Monkey>();
 
@@ -38,7 +38,7 @@ namespace AdventOfCode2022
 
                 //determine operation type and save it in the current monkey as well as the int by which the operation is perormed
                 string[] operationString = lines[2].Split(' ');
-                OperationType currentOperationType;
+                //OperationType currentOperationType;
                 if (operationString[6] == "*" &&operationString[7]=="old")
                 {
                     monkey.operationType = OperationType.quadration;
@@ -100,7 +100,7 @@ namespace AdventOfCode2022
 
 
 
-            //simulate 10000 rounds
+            //simulate 20 rounds
             for(int round =0;round<20; round++)
             {
                 foreach(Monkey monkey in monkeyList)
@@ -113,6 +113,7 @@ namespace AdventOfCode2022
                 
                 
             }
+
 
             foreach (Monkey monkey in monkeyList)
             {
@@ -138,6 +139,18 @@ namespace AdventOfCode2022
             Console.WriteLine("The two msot active monkeys had an inspectionCount of "+inspectionCounterList[0]+ " and " +inspectionCounterList[1]);
             Console.WriteLine("This equates to a total value of "+inspectionCounterList[0]*inspectionCounterList[1]+" monkey buisness units");
 
+
+
+
+        }
+
+        public static void Day_11_Part02()
+        {
+            //list of ints to store the worry level each "ziffer" is stored as a seperate int
+
+            //implement "schriftliche multiplikation" to multiply the worry level lists correctly
+
+            // use division rules to determine if a given worry level list is divisible by the division int
 
 
 

@@ -12,7 +12,7 @@ namespace AdventOfCode2022
         {
             List<int> calorieList = new List<int>();
             int index = 0;
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_01.txt");
             Console.WriteLine(importString);
 
             string[] lines = importString.Split(new string[] { Environment.NewLine },StringSplitOptions.None);

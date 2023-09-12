@@ -69,6 +69,14 @@
     <Compile Include="Day_09.cs" />
     <Compile Include="Day_10.cs" />
     <Compile Include="Day_11.cs" />
+    <Compile Include="Day_12.cs" />
+    <Compile Include="Day_13.cs" />
+    <Compile Include="Day_14.cs" />
+    <Compile Include="Day_16.cs" />
+    <Compile Include="Day_17.cs" />
+    <Compile Include="Day_18.cs" />
+    <Compile Include="Day_21.cs" />
+    <Compile Include="GenericGraph.cs" />
     <Compile Include="ImportString.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -10,7 +10,7 @@ namespace AdventOfCode2022
     {
         public static void Day_07_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_07.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             Tree<dataPoint> tree = new Tree<dataPoint>();
@@ -29,26 +29,26 @@ namespace AdventOfCode2022
             {
                 if (lines[i].Contains("$ ls"))
                 {
-                    Console.WriteLine("list directory: " + currentDirectory.Data.fileName);
+                   // Console.WriteLine("list directory: " + currentDirectory.Data.fileName);
                 }
                 else if (lines[i].Contains("$ cd"))
                 {
                     if (lines[i].Contains(".."))
                     {
                         currentDirectory = currentDirectory.Parent;
-                        Console.WriteLine("return to parent directory " + currentDirectory.Data.fileName);
+                        //Console.WriteLine("return to parent directory " + currentDirectory.Data.fileName);
 
                     }
                     else if (lines[i].Contains("/"))
                     {
-                        Console.WriteLine("start");
+                       // Console.WriteLine("start");
                     }
                     else
                     {
                         string[] tempString = lines[i].Split(' ');
                         currentDirectory = currentDirectory.Children.Find(dP => dP.Data.fileName == tempString[2]);
 
-                        Console.WriteLine(" enter directory " + currentDirectory.Data.fileName);
+                        //Console.WriteLine(" enter directory " + currentDirectory.Data.fileName);
 
                     }
 
@@ -68,7 +68,7 @@ namespace AdventOfCode2022
                         );
 
                         directoryList.Add(currentDirectory.Children[currentDirectory.Children.Count - 1]);
-                        Console.WriteLine("add new Directory Node " + currentDirectory.Children[currentDirectory.Children.Count - 1].Data.fileName);
+                        //Console.WriteLine("add new Directory Node " + currentDirectory.Children[currentDirectory.Children.Count - 1].Data.fileName);
                     }
                     else
                     {
@@ -81,7 +81,7 @@ namespace AdventOfCode2022
                         });
 
                         fileList.Add(currentDirectory.Children[currentDirectory.Children.Count - 1]);
-                        Console.WriteLine("add new file Node " + currentDirectory.Children[currentDirectory.Children.Count - 1].Data.fileName);
+                        //Console.WriteLine("add new file Node " + currentDirectory.Children[currentDirectory.Children.Count - 1].Data.fileName);
                     }
                 }
 
@@ -90,6 +90,7 @@ namespace AdventOfCode2022
             }
 
             int maxHeight = 0;
+
             //find deletable directories
             foreach (TreeNode<dataPoint> file in fileList)
             {
@@ -99,7 +100,7 @@ namespace AdventOfCode2022
                     maxHeight = currentHeight;
                 }
             }
-            Console.WriteLine("Max Height is " + maxHeight);
+            //Console.WriteLine("Max Height is " + maxHeight);
 
 
             List<int> directorySizeList = new List<int>();
@@ -133,7 +134,7 @@ namespace AdventOfCode2022
                 {
                     directorySize = directorySize + child.Data.fileSize;
                 }
-                Console.WriteLine("directory Size: "+directorySize);
+                //Console.WriteLine("directory Size: "+directorySize);
                 directorySizeList.Add(directorySize);
             }
 
@@ -171,12 +172,6 @@ namespace AdventOfCode2022
             }
 
             List<TreeNode<dataPoint>> parents = new List<TreeNode<dataPoint>>();
-            
-
-            
-
-
-
 
         }
 

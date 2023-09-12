@@ -10,7 +10,7 @@ namespace AdventOfCode2022
     {
         public static void Day_04_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_04.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             int fullyContainedPairs = 0;
 
@@ -70,7 +70,7 @@ namespace AdventOfCode2022
 
         public static void Day_04_Part02()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_04.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             int overlappingPairs = 0;
 

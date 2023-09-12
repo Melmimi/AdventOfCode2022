@@ -10,7 +10,7 @@ namespace AdventOfCode2022
     {
         public static void Day_02_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_02.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             int totalScore = 0;
 
@@ -57,7 +57,7 @@ namespace AdventOfCode2022
         }
         public static void Day_02_Part02()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_02.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
             int totalScore = 0;
 

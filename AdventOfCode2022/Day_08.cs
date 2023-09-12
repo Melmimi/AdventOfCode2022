@@ -11,7 +11,7 @@ namespace AdventOfCode2022
 
         public static void Day_08_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_08.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             int[,] treeGrid = new int[lines[0].Length,lines.Length];

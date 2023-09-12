@@ -10,7 +10,7 @@ namespace AdventOfCode2022
     {
         public static void Day_09_Part01()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_09.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
 
@@ -86,7 +86,7 @@ namespace AdventOfCode2022
 
         public static void Day_09_Part02()
         {
-            string importString = Import.ImportString();
+            string importString = Import.ImportString("Day_09.txt");
             string[] lines = importString.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
             List<Coordinate> ropeSegments = new List<Coordinate>();
