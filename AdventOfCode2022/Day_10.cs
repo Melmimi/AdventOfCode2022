@@ -34,7 +34,7 @@ namespace AdventOfCode2022
                     int signalStrength = x * cycle;
                     signalStrengthsList.Add(signalStrength);
                     signalCounter = 40;
-                    Console.WriteLine("Signal Strength at cycle " + cycle + " is " + x * cycle);
+                    //Console.WriteLine("Signal Strength at cycle " + cycle + " is " + x * cycle);
                 }
 
                 if (cooldownCounter<0 && lines[currentLine] != "noop")
@@ -59,7 +59,7 @@ namespace AdventOfCode2022
                     cooldownCounter--;
                 }
 
-                Console.WriteLine("after cycle " + cycle + " x is: " + x + " current Value is "+currentValue+ " current Cooldown is: "+cooldownCounter);
+                //Console.WriteLine("after cycle " + cycle + " x is: " + x + " current Value is "+currentValue+ " current Cooldown is: "+cooldownCounter);
 
                 
 
@@ -73,7 +73,7 @@ namespace AdventOfCode2022
                 signalSum = signalSum + signalStrength;
             }
 
-            Console.WriteLine("The sum of the signal strengths is: "+signalSum);
+            Console.WriteLine("The sum of the six signal strengths is: "+signalSum);
 
         }
 
@@ -146,7 +146,7 @@ namespace AdventOfCode2022
                 cycle++;
                 crtPosition++;
             }
-
+            Console.WriteLine();
             for(int i = 0; i < crtRow.GetLength(0); i++)
             {
                 for(int j = 0; j < crtRow.GetLength(1); j++)
@@ -155,7 +155,7 @@ namespace AdventOfCode2022
                 }
                 Console.WriteLine();
             }
-
+            Console.WriteLine();
         }
 
         public static Instruction addInstruction(string instruction)

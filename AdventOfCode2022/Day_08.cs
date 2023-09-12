@@ -37,7 +37,8 @@ namespace AdventOfCode2022
             }
 
 
-
+            //visualize tree grid
+            /*
             for (int x =0; x<treeGrid.GetLength(0); x++)
             {
                 for(int y=0; y<treeGrid.GetLength(1); y++)
@@ -47,6 +48,8 @@ namespace AdventOfCode2022
                 }
                 Console.WriteLine();
             }
+            */
+
             // go through tree grid and populate visibilty grid
             for (int x = 0; x < treeGrid.GetLength(0); x++)
             {
@@ -118,10 +121,11 @@ namespace AdventOfCode2022
                         visibilityGrid[x, y] = true;
                     }
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
             }
 
             //visualize visibility Grid 
+            /*
             for (int x = 0; x < visibilityGrid.GetLength(0); x++)
             {
                 for (int y = 0; y < visibilityGrid.GetLength(1); y++)
@@ -130,7 +134,7 @@ namespace AdventOfCode2022
 
                 }
                 Console.WriteLine();
-            }
+            }*/
 
             //count the trees but disregard the outer perimeter
             int hiddenTreeCounter = 0;
@@ -144,9 +148,9 @@ namespace AdventOfCode2022
                     }
                 }
             }
-            Console.WriteLine("The number of hidden trees is "+hiddenTreeCounter);
+            //Console.WriteLine("The number of hidden trees is "+hiddenTreeCounter);
             int visibleTrees = treeGrid.GetLength(0) * treeGrid.GetLength(1) - hiddenTreeCounter;
-            Console.WriteLine("The amount of visible trees is: "+ visibleTrees);
+            Console.WriteLine("The amount of trees, visible from the outside grid, is: "+ visibleTrees);
 
             //Part 02:
             int[,] scenicScore = new int[treeGrid.GetLength(0),treeGrid.GetLength(1)];

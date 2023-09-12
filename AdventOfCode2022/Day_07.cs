@@ -148,26 +148,32 @@ namespace AdventOfCode2022
 
                 }
             }
-            Console.WriteLine("total size of deletable directories: " + totalDeletableDirectoriesSize);
+            Console.WriteLine("total size of deletable directories : " + totalDeletableDirectoriesSize);
 
             //Part02:
 
+            //determine how large the file to delete needs to be
             int totalUsedFileSpace = 0;
             foreach(TreeNode<dataPoint> file in fileList)
             {
                 totalUsedFileSpace = totalUsedFileSpace + file.Data.fileSize;
             }
-            Console.WriteLine("total used up space is: "+ totalUsedFileSpace);
+            //Console.WriteLine("total used up space is: "+ totalUsedFileSpace);
             int toFreeUp = totalUsedFileSpace - 40000000;
-            Console.WriteLine("space to free up: " + toFreeUp);
+            //Console.WriteLine("space to free up: " + toFreeUp);
+            //Console.WriteLine("descending DirectorySize List Count: "+descendingDirectorySizeList.Count);
 
-            Console.WriteLine("descending DirectorySize List Count: "+descendingDirectorySizeList.Count);
-            foreach(int ds in descendingDirectorySizeList)
+            //find the smallest file that fits the criteria
+            List<int> ascendingDirectorySizeList = directorySizeList.OrderByDescending(x => x).ToList();
+            ascendingDirectorySizeList.Reverse();
+
+            foreach (int ds in ascendingDirectorySizeList)
             {
-                Console.WriteLine("ds: "+ds);
+                //Console.WriteLine("ds: "+ds);
                 if(ds >= toFreeUp)
                 {
-                    Console.WriteLine(" eligible directory to delete: "+ ds);
+                    Console.WriteLine("eligible directory to delete: "+ ds);
+                    break;
                 }
             }
 

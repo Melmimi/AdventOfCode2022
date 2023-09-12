@@ -80,7 +80,7 @@ namespace AdventOfCode2022
                 }
                 */
             }
-
+            Console.WriteLine("Part 01:");
             Console.WriteLine("tail has visited "+visitedLocations.Count+ " locations at least once");
         }
 
@@ -101,7 +101,7 @@ namespace AdventOfCode2022
             foreach (string line in lines)
             {
                 string[] splitLine = line.Split(' ');
-                Console.WriteLine("Ausgangssituation: " +ropeSegments[0]+ " Anweisung: " + line);
+                //Console.WriteLine("Ausgangssituation: " +ropeSegments[0]+ " Anweisung: " + line);
                 for (int i = 0; i < Int32.Parse(splitLine[1]); i++)
                 {
                     switch (splitLine[0])
@@ -211,7 +211,7 @@ namespace AdventOfCode2022
 
 
             }
-
+            Console.WriteLine("Part 02:");
             Console.WriteLine("tail has visited " + visitedLocations.Count + " locations at least once");
         }
 

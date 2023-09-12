@@ -5,3 +5,10 @@ C:\Users\miche\source\repos\AdventOfCode2022\AdventOfCode2022\obj\Debug\AdventOf
 C:\Users\miche\source\repos\AdventOfCode2022\AdventOfCode2022\obj\Debug\AdventOfCode2022.csproj.CoreCompileInputs.cache
 C:\Users\miche\source\repos\AdventOfCode2022\AdventOfCode2022\obj\Debug\AdventOfCode2022.exe
 C:\Users\miche\source\repos\AdventOfCode2022\AdventOfCode2022\obj\Debug\AdventOfCode2022.pdb
+C:\Users\miche\Documents\GitHub\AdventOfCode2022\AdventOfCode2022\bin\Debug\AdventOfCode2022.exe.config
+C:\Users\miche\Documents\GitHub\AdventOfCode2022\AdventOfCode2022\bin\Debug\AdventOfCode2022.exe
+C:\Users\miche\Documents\GitHub\AdventOfCode2022\AdventOfCode2022\bin\Debug\AdventOfCode2022.pdb
+C:\Users\miche\Documents\GitHub\AdventOfCode2022\AdventOfCode2022\obj\Debug\AdventOfCode2022.csprojAssemblyReference.cache
+C:\Users\miche\Documents\GitHub\AdventOfCode2022\AdventOfCode2022\obj\Debug\AdventOfCode2022.csproj.CoreCompileInputs.cache
+C:\Users\miche\Documents\GitHub\AdventOfCode2022\AdventOfCode2022\obj\Debug\AdventOfCode2022.exe
+C:\Users\miche\Documents\GitHub\AdventOfCode2022\AdventOfCode2022\obj\Debug\AdventOfCode2022.pdb

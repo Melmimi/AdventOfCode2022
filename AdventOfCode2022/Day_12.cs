@@ -63,12 +63,12 @@ namespace AdventOfCode2022
             }
 
             List<int> pathCounterList = new List<int>();
-            Console.WriteLine("number of potential starts: "+potentialStarts.Count);
+            //Console.WriteLine("number of potential starts: "+potentialStarts.Count);
 
 
         foreach(Tile Start in potentialStarts)
             {
-                Console.WriteLine("current Start:" +Start);
+                //Console.WriteLine("current Start:" +Start);
                 // reset visited locations
                 for(int x = 0; x < tileMap.GetLength(0); x++)
                 {
@@ -180,7 +180,7 @@ namespace AdventOfCode2022
                             break;
 
                         case EntryDirection.Unvisited:
-                            Console.WriteLine("Found an unvisited Tile");
+                            //Console.WriteLine("Found an unvisited Tile");
                             invalidStart = true;
                             break;
                     }

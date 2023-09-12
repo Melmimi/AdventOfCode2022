@@ -81,6 +81,7 @@ namespace AdventOfCode2022
             }
 
             //debug print starting items per monkey
+            /*
             foreach (Monkey monkey in monkeyList)
             {
                 Console.WriteLine("Monkey: " + monkey.monkeyID);
@@ -97,7 +98,7 @@ namespace AdventOfCode2022
                 Console.WriteLine("false monkey is. " + monkey.falseMonkeyID);
 
             }
-
+            */
 
 
             //simulate 20 rounds
@@ -107,36 +108,34 @@ namespace AdventOfCode2022
                 {
 
                     monkey.inspect();
-                    Console.WriteLine(" ");
+                    //Console.WriteLine(" ");
                 }
 
                 
                 
             }
 
-
+            /*
             foreach (Monkey monkey in monkeyList)
             {
-
                 foreach (int item in monkey.heldItems)
                 {
                     Console.Write(item + ",");
                 }
                 Console.WriteLine();
-
-
             }
+            */
 
             List<int> inspectionCounterList = new List<int>();
             foreach (Monkey monkey in monkeyList)
             {
-                Console.WriteLine("monkey "+monkey.monkeyID+" inspected "+monkey.inspectionCounter+" times");
+                //Console.WriteLine("monkey "+monkey.monkeyID+" inspected "+monkey.inspectionCounter+" times");
                 inspectionCounterList.Add(monkey.inspectionCounter);
             }
 
             inspectionCounterList = inspectionCounterList.OrderByDescending(i => i).ToList();
 
-            Console.WriteLine("The two msot active monkeys had an inspectionCount of "+inspectionCounterList[0]+ " and " +inspectionCounterList[1]);
+            Console.WriteLine("The two most active monkeys had an inspectionCount of "+inspectionCounterList[0]+ " and " +inspectionCounterList[1]);
             Console.WriteLine("This equates to a total value of "+inspectionCounterList[0]*inspectionCounterList[1]+" monkey buisness units");
 
 
@@ -146,13 +145,13 @@ namespace AdventOfCode2022
 
         public static void Day_11_Part02()
         {
-            //list of ints to store the worry level each "ziffer" is stored as a seperate int
+            //list of ints to store the worry level, each digit is stored as a seperate int
 
-            //implement "schriftliche multiplikation" to multiply the worry level lists correctly
+            //implement "long multiplication" to multiply the worry level lists correctly
 
             // use division rules to determine if a given worry level list is divisible by the division int
 
-
+            Console.WriteLine("No solution for Part 02 yet");
 
         }
     }
@@ -187,26 +186,26 @@ namespace AdventOfCode2022
                     foreach (int item in heldItems)
                     {
                         inspectionCounter++;
-                        Console.WriteLine("monkey " + monkeyID + " is inspecting an item with worry level "+ item);
+                        //Console.WriteLine("monkey " + monkeyID + " is inspecting an item with worry level "+ item);
                         // inspect te item/ raise worry level as defined by operation
                         double worryLevel = item + operationInt;
-                        Console.WriteLine("monkey is performing an addition, the result is: "+worryLevel);
+                        //Console.WriteLine("monkey is performing an addition, the result is: "+worryLevel);
                         // loose interest/ divide by three and round down
 
                         worryLevel = Math.Floor(worryLevel/3);
                         int newItem = Convert.ToInt32(worryLevel);
-                        Console.WriteLine("worry Level decreased to: " + newItem);
+                        //Console.WriteLine("worry Level decreased to: " + newItem);
                         // test the item to see where to throw to
                         if (newItem % divisionInt == 0)
                         {
                             //throw to true monkey
-                            Console.WriteLine("test came back true, throwing to trueMonkey: "+trueMonkeyID);
+                            //Console.WriteLine("test came back true, throwing to trueMonkey: "+trueMonkeyID);
                             trueMonkey.heldItems.Add(newItem);
                         }
                         else
                         {
                             //throw to false monkey
-                            Console.WriteLine("test came back false, throwing to false Monkey: " + falseMonkeyID);
+                            //Console.WriteLine("test came back false, throwing to false Monkey: " + falseMonkeyID);
                             falseMonkey.heldItems.Add(newItem);
                         }
 
@@ -219,26 +218,26 @@ namespace AdventOfCode2022
                     foreach (int item in heldItems)
                     {
                         inspectionCounter++;
-                        Console.WriteLine("monkey " + monkeyID + " is inspecting an item with worry level " + item);
+                        //Console.WriteLine("monkey " + monkeyID + " is inspecting an item with worry level " + item);
                         // inspect te item/ raise worry level as defined by operation
                         double worryLevel = item * operationInt;
                         // loose interest/ divide by three and round down
-                        Console.WriteLine("monkey is performing a multiplication, the result is: " + worryLevel);
+                        //Console.WriteLine("monkey is performing a multiplication, the result is: " + worryLevel);
 
                         worryLevel = Math.Floor(worryLevel / 3);
                         int newItem = Convert.ToInt32(worryLevel);
-                        Console.WriteLine("worry Level decreased to: " + newItem);
+                        //Console.WriteLine("worry Level decreased to: " + newItem);
                         // test the item to see where to throw to
                         if (newItem % divisionInt == 0)
                         {
                             //throw to true monkey
-                            Console.WriteLine("test came back true, throwing to trueMonkey: " + trueMonkeyID);
+                            //Console.WriteLine("test came back true, throwing to trueMonkey: " + trueMonkeyID);
                             trueMonkey.heldItems.Add(newItem);
                         }
                         else
                         {
                             //throw to false monkey
-                            Console.WriteLine("test came back false, throwing to false Monkey: " + falseMonkeyID);
+                            //Console.WriteLine("test came back false, throwing to false Monkey: " + falseMonkeyID);
                             falseMonkey.heldItems.Add(newItem);
                         }
 
@@ -252,26 +251,26 @@ namespace AdventOfCode2022
                     foreach (int item in heldItems)
                     {
                         inspectionCounter++;
-                        Console.WriteLine("monkey " + monkeyID + " is inspecting an item with worry level " + item);
+                        //Console.WriteLine("monkey " + monkeyID + " is inspecting an item with worry level " + item);
                         // inspect te item/ raise worry level as defined by operation
                         double worryLevel = item *item;
                         // loose interest/ divide by three and round down
-                        Console.WriteLine("monkey is performing a quadration, the result is: " + worryLevel);
+                        //Console.WriteLine("monkey is performing a quadration, the result is: " + worryLevel);
 
                         worryLevel = Math.Floor(worryLevel / 3);
                         int newItem = Convert.ToInt32(worryLevel);
-                        Console.WriteLine("worry Level decreased to: " + newItem);
+                        //Console.WriteLine("worry Level decreased to: " + newItem);
                         // test the item to see where to throw to
                         if (newItem % divisionInt == 0)
                         {
                             //throw to true monkey
-                            Console.WriteLine("test came back true, throwing to trueMonkey: " + trueMonkeyID);
+                            //Console.WriteLine("test came back true, throwing to trueMonkey: " + trueMonkeyID);
                             trueMonkey.heldItems.Add(newItem);
                         }
                         else
                         {
                             //throw to false monkey
-                            Console.WriteLine("test came back false, throwing to false Monkey: " + falseMonkeyID);
+                            //Console.WriteLine("test came back false, throwing to false Monkey: " + falseMonkeyID);
                             falseMonkey.heldItems.Add(newItem);
                         }
 
