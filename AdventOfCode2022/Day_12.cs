@@ -65,27 +65,46 @@ namespace AdventOfCode2022
             List<int> pathCounterList = new List<int>();
             //Console.WriteLine("number of potential starts: "+potentialStarts.Count);
 
+            Console.WriteLine("My approach for this one is a bit brute-force so this might take a while");
+            Console.WriteLine("Part 01:");
+            retraceSteps(tileMap[StartingPosition.x,StartingPosition.y]);
 
+            Console.WriteLine("Part 02:");
         foreach(Tile Start in potentialStarts)
+            {
+                retraceSteps(Start);
+                
+            }
+            //Breadth first search through the Tile array
+            //Console.WriteLine(pathCounterList.Count+" paths found");
+            /*
+            foreach(int path in pathCounterList)
+            {
+                Console.WriteLine(path);
+            }
+            */
+            Console.WriteLine("The shortest path is " + pathCounterList.Min());
+
+            void retraceSteps(Tile Start)
             {
                 //Console.WriteLine("current Start:" +Start);
                 // reset visited locations
-                for(int x = 0; x < tileMap.GetLength(0); x++)
+                for (int x = 0; x < tileMap.GetLength(0); x++)
                 {
-                    for(int y =0; y< tileMap.GetLength(1); y++)
+                    for (int y = 0; y < tileMap.GetLength(1); y++)
                     {
                         tileMap[x, y].entryDirection = EntryDirection.Unvisited;
                     }
                 }
 
                 tileMap[Start.coordinate.x, Start.coordinate.y].entryDirection = EntryDirection.StartingPosition;
-                frontierList = new List<Tile>() {Start };
+                frontierList = new List<Tile>() { Start };
                 for (int i = 0; i < frontierList.Count; i++)
                 {
                     Tile currentTile = frontierList[i];
                     int currentX = currentTile.coordinate.x;
                     int currentY = currentTile.coordinate.y;
-                    
+
                     if (currentX - 1 >= 0 && tileMap[currentX - 1, currentY].entryDirection == EntryDirection.Unvisited)
                     {
                         //we could go left
@@ -154,7 +173,7 @@ namespace AdventOfCode2022
                 Coordinate currentPosition = EndPosition;
                 int pathCounter = 0;
                 bool invalidStart = false;
-                while (!currentPosition.Equals(new Coordinate(Start.coordinate.x,Start.coordinate.y))&&invalidStart==false)
+                while (!currentPosition.Equals(new Coordinate(Start.coordinate.x, Start.coordinate.y)) && invalidStart == false)
                 {
                     //Console.WriteLine("current Position: " + currentPosition);
                     switch (tileMap[currentPosition.x, currentPosition.y].entryDirection)
@@ -190,17 +209,9 @@ namespace AdventOfCode2022
                     Console.WriteLine("The found Path is " + pathCounter + " units long");
                     pathCounterList.Add(pathCounter);
                 }
-                
-            }
-            //Breadth first search through the Tile array
-            Console.WriteLine(pathCounterList.Count+" paths found");
-
-            foreach(int path in pathCounterList)
-            {
-                Console.WriteLine(path);
             }
 
-            Console.WriteLine("The shortest path is " + pathCounterList.Min());
+
         }
 
         public enum EntryDirection

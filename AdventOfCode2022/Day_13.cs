@@ -14,6 +14,9 @@ namespace AdventOfCode2022
             string[] packages = importString.Split(new string[] { Environment.NewLine+ Environment.NewLine }, StringSplitOptions.None);
 
             int index = 0;
+
+            Console.WriteLine("No solution for day 13 yet.");
+
             foreach (string package in packages)
             {
                 string[] sides = package.Split(new string[] {Environment.NewLine }, StringSplitOptions.None);

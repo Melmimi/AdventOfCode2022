@@ -14,7 +14,6 @@ namespace AdventOfCode2022
             //don't forget to also change the input file location in ImportString.cs, when generating solutions for other days
             string userInput=requestDay();
             executeDay(userInput);
-            //Day_21.Day_21_Part01();
             Console.ReadLine();
 
             string requestDay()
