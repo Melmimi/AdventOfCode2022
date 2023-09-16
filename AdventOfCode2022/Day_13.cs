@@ -36,7 +36,7 @@ namespace AdventOfCode2022
                 index++;
             }
             
-            Console.WriteLine(packages[0]);
+            //Console.WriteLine(packages[0]);
 
 
 
@@ -60,15 +60,15 @@ namespace AdventOfCode2022
                 {
                     if (item.Length > 1)
                     {
-                        Console.WriteLine("item is a list and needs to be processed further "+ item);
+                        //Console.WriteLine("item is a list and needs to be processed further "+ item);
                     }else if (item.Length == 1)
                     {
-                        Console.WriteLine("item is a single digit: "+item);
+                        //Console.WriteLine("item is a single digit: "+item);
                     }
                 }
 
 
-                Console.WriteLine(bracketLess);
+                //Console.WriteLine(bracketLess);
 
                 //set up a Node ready to be added to the tree
                 // do we really want this to return something 

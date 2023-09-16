@@ -29,10 +29,10 @@ namespace AdventOfCode2022
                     int[] coordinates = Array.ConvertAll(tempString, s => int.Parse(s)); 
                     pathInstructionsList[lineCounter].Add(new Coordinate(coordinates[0],coordinates[1]));
 
-                    Console.Write(pathInstructionsList[lineCounter][instructionsCounter]+",");
+                    //Console.Write(pathInstructionsList[lineCounter][instructionsCounter]+",");
                     instructionsCounter++;
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
                 lineCounter++;
 
             }
@@ -50,7 +50,7 @@ namespace AdventOfCode2022
                         }
                 }
             }
-            Console.WriteLine("the furthest rock is "+lastRock);
+            //Console.WriteLine("the furthest rock is "+lastRock);
 
             //construct map
             Tile[,] tileMap = new Tile[515, lastRock+5];
@@ -236,6 +236,7 @@ namespace AdventOfCode2022
                 Console.WriteLine();
 
             }
+            Console.WriteLine("Part01: ");
             Console.WriteLine("settled units of sand: " + settledCounter);
 
         }
@@ -260,10 +261,10 @@ namespace AdventOfCode2022
                     int[] coordinates = Array.ConvertAll(tempString, s => int.Parse(s));
                     pathInstructionsList[lineCounter].Add(new Coordinate(coordinates[0], coordinates[1]));
 
-                    Console.Write(pathInstructionsList[lineCounter][instructionsCounter] + ",");
+                    //Console.Write(pathInstructionsList[lineCounter][instructionsCounter] + ",");
                     instructionsCounter++;
                 }
-                Console.WriteLine();
+                //Console.WriteLine();
                 lineCounter++;
 
             }
@@ -281,7 +282,7 @@ namespace AdventOfCode2022
                     }
                 }
             }
-            Console.WriteLine("the furthest rock is " + lastRock);
+            //Console.WriteLine("the furthest rock is " + lastRock);
 
             //construct map
             Tile[,] tileMap = new Tile[1000, lastRock + 5];
@@ -393,41 +394,13 @@ namespace AdventOfCode2022
                     break;
                 }
 
-                // Draw Map
-                /*
-                //Console.Clear();
-                for (int y = 0; y < tileMap.GetLength(1); y++)
-                {
-                    for (int x = 400; x < tileMap.GetLength(0); x++)
-                    {
-                        if (tileMap[x, y].material == Material.Air)
-                        {
-                            Console.Write(".");
-                        }
-                        else if (tileMap[x, y].material == Material.Rock)
-                        {
-                            Console.Write("#");
-                        }
-                        else if (tileMap[x, y].material == Material.Void)
-                        {
-                            Console.Write("x");
-                        }
-                        else if (tileMap[x, y].material == Material.Sand)
-                        {
-                            Console.Write("o");
-                        }
-                        else if (tileMap[x, y].material == Material.SandSpawner)
-                        {
-                            Console.Write("+");
-                        }
-                    }
-                    Console.WriteLine();
-                }*/
+               
             }
 
 
             // Draw Map
             //Console.Clear();
+            /*
             for (int y = 0; y < tileMap.GetLength(1); y++)
             {
                 for (int x = 400; x < tileMap.GetLength(0); x++)
@@ -453,9 +426,12 @@ namespace AdventOfCode2022
                         Console.Write("+");
                     }
                 }
-                Console.WriteLine();
+
+                //Console.WriteLine();
 
             }
+            */
+            Console.WriteLine("Part02: ");
             Console.WriteLine("settled units of sand: " + settledCounter);
 
         }

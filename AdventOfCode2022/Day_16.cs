@@ -16,6 +16,8 @@ namespace AdventOfCode2022
             Graph<Valve> valveGraph = new Graph<Valve>();
             valveGraph.nodes = new List<GraphNode<Valve>>();
 
+            Console.WriteLine("There is no answer for day 16 yet.");
+
             foreach(string line in lines)
             {
                 string[] halves = line.Split(';');
@@ -89,6 +91,7 @@ namespace AdventOfCode2022
 
 
             //DEbug print
+            /*
             foreach (GraphNode<Valve> node in valveGraph.nodes)
             {
                 Console.Write(node.Data + " ; ");
@@ -98,6 +101,8 @@ namespace AdventOfCode2022
                 }
                 Console.WriteLine();
             }
+            */
+
 
             //search logic
 
@@ -105,7 +110,7 @@ namespace AdventOfCode2022
             //go through them in order and calculate the amount of presure released in that paticular path
             //i'm gonna need a search algorithm everytime I go to the next valve from my list to see what the shortest path is
             //this will be a major headache
-            // reshuffle the stack--- How the hell do I do that?
+            // reshuffle the stack--- How do I do that?
             // go again
 
             //tipp from reddit to consider: 

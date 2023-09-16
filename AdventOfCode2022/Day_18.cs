@@ -119,10 +119,11 @@ namespace AdventOfCode2022
                     }
                 }
             }
+            Console.WriteLine("Part 01:");
             Console.WriteLine("number of exposed Sides is: " + totalExposedSides);
 
             //Part 2:
-
+            Console.WriteLine("Part 02: (will take a while)");
             //make a material enum
             Material[,,] materialMap = new Material[22, 22, 22];
 
@@ -351,7 +352,7 @@ namespace AdventOfCode2022
                 }
             }
 
-            Console.WriteLine("total number of exposed exterior sides is " + totalExposedExteriorSides);
+           
 
             //maybe make a debug drawing that prints the cube in slices and has a different symbol for crust?
             for (int z = 0; z < dropletMap.GetLength(2); z++)
@@ -428,6 +429,8 @@ namespace AdventOfCode2022
                 }
                 Console.WriteLine("_______________________________________________________________________________________");
             }
+
+            Console.WriteLine("total number of exposed exterior sides is " + totalExposedExteriorSides);
 
         }
 

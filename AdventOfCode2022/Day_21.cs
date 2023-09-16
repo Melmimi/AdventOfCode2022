@@ -109,12 +109,12 @@ namespace AdventOfCode2022
                     {
                         leafNodes.Add(leafNodes[i].Parent);
                     }
-                    Console.WriteLine("current leaf Node after processing: " + leafNodes[i].Data);
+                    //Console.WriteLine("current leaf Node after processing: " + leafNodes[i].Data);
                 }
                 else if(leafNodes[i].Children!= null)
                 {
                     leafNodes.Add(leafNodes[i]);
-                    Console.WriteLine("one of the children of "+leafNodes[i].Data.id +" was not ready, moving node to the end of the list");
+                    //Console.WriteLine("one of the children of "+leafNodes[i].Data.id +" was not ready, moving node to the end of the list");
                 }
                 else
                 {
@@ -125,8 +125,9 @@ namespace AdventOfCode2022
                 }
 
             }
-
+            Console.WriteLine("Part01:");
             Console.WriteLine("The monkey named root shouts: "+root.Data.value);
+            Console.WriteLine("no answer for Part 2 yet");
         }
 
         public struct Monkey

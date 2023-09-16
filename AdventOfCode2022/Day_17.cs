@@ -134,6 +134,7 @@ namespace AdventOfCode2022
             }
 
             Console.WriteLine("the tower of Rocks will be "+highestRock+" units tall");
+            Console.WriteLine("No solution for Part 02 yet, because the numbers get very large");
 
             //find pattern
             List<List<Tile>> patternLists = new List<List<Tile>>();
